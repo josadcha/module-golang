@@ -1,7 +1,6 @@
 package orderbook
 
 type Orderbook struct {
-	// TODO
 	Ask      *Heap
 	Bid      *Heap
 	TotalAsk uint64
@@ -9,7 +8,7 @@ type Orderbook struct {
 }
 
 func New() *Orderbook {
-	// TODO
+
 	ask := &Heap{comp: less, elems: make([]*Order, 0)}
 	bid := &Heap{comp: greater, elems: make([]*Order, 0)}
 	return &Orderbook{Ask: ask, Bid: bid, TotalAsk: 0, TotalBid: 0}
@@ -191,4 +190,5 @@ func (heap *Heap) Pop() *Order {
 	}
 
 	return head
+
 }
